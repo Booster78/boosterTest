@@ -77,7 +77,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>Main</mainClass>
+                            <mainClass>com.booster.boosterTest.controller.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
