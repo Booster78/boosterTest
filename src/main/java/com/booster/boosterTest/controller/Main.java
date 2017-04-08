@@ -1,21 +1,19 @@
 package com.booster.boosterTest.controller;
 
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
-import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@Controller
-@EnableAutoConfiguration
+@SpringBootApplication
 public class Main {
 
-    @GetMapping("/test")
+   /* @GetMapping("/test")
     @ResponseBody
     String home() {
         return "Hello World!";
     }
-
+*/
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(new Object[]{Main.class, SwaggerConfig.class}, args);
+        SpringApplication.run(Main.class, args);
+     //   SpringApplication.run(new Object[]{Main.class, SwaggerConfig.class}, args);
     }
 }
