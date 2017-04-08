@@ -15,7 +15,7 @@ public class SampleController {
         return "Hello World!";
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void mainback(String[] args) throws Exception {
         SpringApplication.run(new Object[]{SampleController.class, SwaggerConfig.class}, args);
     }
 }
