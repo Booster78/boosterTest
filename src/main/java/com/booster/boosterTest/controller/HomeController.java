@@ -16,7 +16,7 @@ import java.util.List;
  * Created by sorin on 08/04/2017.
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping(value = "/")
 public class HomeController {
 
     private RecordRepository repository;
@@ -26,7 +26,7 @@ public class HomeController {
         this.repository = repository;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET,  produces="application/json")
     public @ResponseBody List<Record> home(ModelMap model) {
         System.out.print("GET home");
         List<Record> records = repository.findAll();
@@ -35,7 +35,7 @@ public class HomeController {
         return records;
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST,  produces="application/json",consumes="application/json")
     public @ResponseBody
     List<Record> insertData(ModelMap model,
                             @ModelAttribute("insertRecord") @Valid Record record,
