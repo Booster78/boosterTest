@@ -6,7 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface RecordRepository extends JpaRepository<Podcast, Long> {
+public interface PodcastRepository extends JpaRepository<Podcast, Long> {
 
     List<Podcast> findByUserId(String userId);
+    Podcast findByUserIdAndId(String userId,long id);
 }
